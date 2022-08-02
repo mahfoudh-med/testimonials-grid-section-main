@@ -1,0 +1,99 @@
+/*Start  Global Rules  */
+*{
+    box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+body{
+font-family:'Barlow Semi Condensed',sans-serif ;
+font-size:13px;
+background-color: hsl(210, 46%, 95%);
+}
+/*End  Global Rules  */
+.container{
+display:grid;
+grid-template-columns: repeat(4,minmax(auto,200px));
+gap:20px;
+width:fit-content;
+margin: 50px auto;
+}
+@media (max-width:767px){
+.container{
+display:flex;
+flex-direction: column;
+padding:20px;
+}
+}
+.box{
+padding:25px;
+border-radius:10px;
+border:1px solid white;
+}
+.box .profile{
+display:flex;
+gap:10px;
+}
+.box .profile img{
+height:20px;
+border-radius: 50%;
+border: 1px solid white;
+}
+.box .profile .text h2{
+color:hsl(0, 0%, 81%);
+font-size:1em;
+margin:0;
+font-weight: 500;
+}
+.box .profile .text span{
+font-size:0.8em;
+color:hsl(0, 0%, 50%);
+}
+.box .info p{
+color: white;
+font-weight: 600;
+line-height: 1.4;
+font-size: 1.2em;
+margin: 15px 0;
+}
+.box .info q{
+font-size: 0.8em;
+color: hsl(0, 0%, 70%);
+line-height: 1.4; 
+}
+
+
+.box.one{
+position:relative;
+z-index: 1;
+grid-column: span 2;
+background-color: hsl(263, 55%, 52%);
+}
+.box.one svg{
+position: absolute;
+z-index: -1;
+right: 81px;
+top: 0;
+}
+@media (max-width:767px){
+.box.one svg{
+right: 20px;
+}
+    }
+.box.two{
+background-color:hsl(217, 19%, 35%) ;
+}
+.box.three{
+grid-row:span 2;
+background-color:hsl(0, 0%, 100%);
+}
+.box.four{
+background-color:hsl(0, 0%, 100%) ;
+}
+.box.five{
+grid-column: span 2;
+background-color:hsl(219, 29%, 14%) ;
+}
+.box.three .info p,
+.box.four .info p{
+color:  black;
+}
